@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
+    <script src="https://kit.fontawesome.com/1a6029b417.js" crossorigin="anonymous"></script>
 	<title>ISM courses</title>
 </head>
 <body>
@@ -42,7 +43,7 @@
 				<p class="contacts__text">Heb je een vraag?
 										Wij staan voor je klaar!</p>
 				<div class="worktime">
-					<p class="contacts__text">Openingstijden:</p>
+					<p class="contacts__text"><i class="far fa-clock"></i>Openingstijden:</p>
 					<div class="contacts__table">
 						<div class="contacts__col">
 							<p class="contacts__text">Ma-Vr</p>
@@ -55,7 +56,7 @@
 					</div>
 				</div>
 				<div class="contact__inner telephone">
-					<p class="contacts__text">Telefonisch bereikbaar:</p>
+					<p class="contacts__text"><i class="fas fa-phone-alt"></i>Telefonisch bereikbaar:</p>
 					<div class="contacts__table">
 						<div class="contacts__col">
 							<p class="contacts__text">Ma-Vr</p>
@@ -170,18 +171,21 @@
 		</a>
 		<div class="header__inner">
 			<div class="header__main">
-				<div class="production">Producten</div>
+				<div class="production">
+					<p>Producten</p><i class="fas fa-angle-down"></i>
+				</div>
 				<form action="" method="" class="search__wrapper">
 					<input type="text" placeholder="Zoek product" class="search">
+					<i class="fas fa-search"></i>
 				</form>
 				<input type="checkbox">
-				<div class="profile">Inloggen</div>
-				<a href="#" class="cart"></a>
+				<a class="profile"><i class="fas fa-user-alt"></i>Inloggen</a>
+				<a href="#" class="cart"><i class="fas fa-shopping-cart"></i><div class="cart__count"><p>2</p><i class="fas fa-angle-down"></i></div></a>
 			</div>
 			<ul class="advices">
-				<li class="advices__item">Uitstekende klantenservice</li>
-				<li class="advices__item">Gratis levering of afhalen in onze shops</li>
-				<li class="advices__item">Gratis levering of afhalen in onze shops</li>
+				<li class="advices__item"><i class="fas fa-thumbs-up"></i>Uitstekende klantenservice</li>
+				<li class="advices__item"><i class="fas fa-truck"></i>Gratis levering of afhalen in onze shops</li>
+				<li class="advices__item"><i class="fas fa-phone-alt"></i>Gratis levering of afhalen in onze shops</li>
 			</ul>
 		</div>
 	</div>
@@ -189,7 +193,53 @@
 <!-- END HEADER -->
 <!-- FOOTER -->
 <footer class="footer">
-	
+	<div class="footer__inner">
+		<div class="about-company__wrapper">
+			<h2>Over bedrijf</h2>
+			<nav>
+				<a href="#">Assortiment</a>
+				<a href="#">Zakelijke klanten</a>
+				<a href="#">Nieuws</a>
+			</nav>
+		</div>
+		<div class="service__wrapper">
+			<h2>Klantenservice</h2>
+			<nav>
+				<a href="#">Bestellen</a>
+				<a href="#">Betalen</a>
+				<a href="#">Bezorgen</a>
+				<a href="#">Afhalen</a>
+				<a href="#">Contact</a>
+				<a href="#">Nieuwsbrief</a>
+			</nav>
+		</div>
+		<div class="newsletter">
+			<h2>Nieuwsbrief</h2>
+			<form action="">
+				<input type="mail" placeholder="E-mailadres">
+				<input type="submit" value="Aanmelden">
+			</form>
+		</div>
+		<div class="partners">
+			<img src="img/iban.png" srcset="img/iban@2.png 2x, img/iban@3.png 3x" alt="">
+             <img src="img/dhl.png" srcset="img/dhl@2.png 2x, img/dhl@3.png 3x" alt="">
+             <img src="img/thuls.png" srcset="img/thuls@2.png 2x, img/thuls@3.png 3x" alt="">
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<nav>
+			<a href="#">Algemene voorwarden</a>
+			<a href="#">Privacy</a>
+			<a href="#">Cookies</a>
+			<a href="#"Disclaimer></a>
+		</nav>
+		<div class="rate">
+			<div class="stars">
+				<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+			</div>
+			<p>1.011 beoordelingen</p>
+		</div>
+	</div>
 </footer>
 <!-- END FOOTER -->
 </body>
