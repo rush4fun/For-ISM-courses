@@ -8,30 +8,77 @@
 	<title>ISM courses</title>
 </head>
 <body>
+<!-- HEADER -->
+<header class="header">
+	<div class="wrapper">
+		<a href="#" class="logo">
+			<img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x" alt="Logo">
+		</a>
+		<div class="header__inner">
+			<div class="header__main">
+				<div class="production">
+					<p>Producten</p><i class="fas fa-angle-down"></i>
+				</div>
+				<div class="search__wrapper">
+					<form action="" method="" class="search__form">
+						<input type="text" placeholder="Zoek product" class="search">
+						<i class="fas fa-search"></i>
+					</form>
+				</div>
+				<div class="btw__wrapper">
+					<input type="checkbox" name="btw">
+				</div>
+				<div class="profile__wrapper">
+					<a class="profile">
+						<i class="fas fa-user-alt"></i>
+						<p>Inloggen</p>
+					</a>
+				</div>
+				<div class="cart__wrapper">
+					<a href="#" class="cart">
+						<i class="fas fa-shopping-cart"></i>
+						<div class="cart__count">
+							<p>2</p>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</a>
+				</div>
+			</div>
+			<ul class="advices">
+				<li class="advices__item"><i class="fas fa-thumbs-up"></i>Uitstekende klantenservice</li>
+				<li class="advices__item"><i class="fas fa-truck"></i>Gratis levering of afhalen in onze shops</li>
+				<li class="advices__item"><i class="fas fa-phone-alt"></i>Gratis levering of afhalen in onze shops</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- END HEADER -->
 <!-- MAIN -->
-<div class="main">
+<main class="main">
 	<div class="wrapper">	
 		<!-- SIDEBAR -->
-		<aside class="products__list">
-			<a class="products__item">Behuizingen</a>
-			<a class="products__item">Bevestigingsmateriaal</a>
-			<a class="products__item">Draad en kabel</a>
-			<a class="products__item">Domotica</a>
-			<a class="products__item">Schakelmateriaal</a>
-			<a class="products__item">Rook- en hittemelders</a>
-			<a class="products__item">Verdeelsystemen</a>
-			<a class="products__item">Lichtbronnen</a>
-			<a class="products__item">LED-lichtbronnen</a>
-			<a class="products__item">Installatiemateriaal</a>
-			<a class="products__item">Kabeldraagsystemen</a>
-			<a class="products__item">Armaturen</a>
-			<a class="products__item">Data en multimedia</a>
-			<a class="products__item">Ruimte-oplossingen</a>
-			<a class="products__item">Lichtregeling</a>
+		<aside class="products__wrapper">
+			<nav class="products__list">
+				<a class="products__item">Behuizingen</a>
+				<a class="products__item">Bevestigingsmateriaal</a>
+				<a class="products__item">Draad en kabel</a>
+				<a class="products__item">Domotica</a>
+				<a class="products__item">Schakelmateriaal</a>
+				<a class="products__item">Rook- en hittemelders</a>
+				<a class="products__item">Verdeelsystemen</a>
+				<a class="products__item">Lichtbronnen</a>
+				<a class="products__item">LED-lichtbronnen</a>
+				<a class="products__item">Installatiemateriaal</a>
+				<a class="products__item">Kabeldraagsystemen</a>
+				<a class="products__item">Armaturen</a>
+				<a class="products__item">Data en multimedia</a>
+				<a class="products__item">Ruimte-oplossingen</a>
+				<a class="products__item">Lichtregeling</a>
+			</nav>
 		</aside>
 		<!-- END SIDEBAR -->
 		<!-- CONTENT -->
-		<section class="content">
+		<div class="content">
 			<div class="good">
 				<div class="good__info">
 					<h2 class="good__title">Gehoorbescherming 20% korting</h2>
@@ -69,8 +116,8 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section>
+		</div>
+		<div>
 			<div class="good">
 				<div class="good__info">
 					<h2 class="good__title">Schuurmachines
@@ -87,67 +134,69 @@
 				</div>
 				<img src="img/signal.png" srcset="img/signal@2x.png 2x, img/signal@3x.png 3x" alt="Alarm signal">
 			</div>
-		</section>
+		</div>
 		<!-- END CONTENT -->
 		<!-- SLIDER -->
-		<section class="slider__wrapper">
-			<button class="arrow"></button>
-			<div class="slider">
-				<h2>Bestsellers</h2>
-				<div class="slider__inner">
-					<div class="slider__item">
-						<img src="img/drill.png" srcset="img/drill@2x.png 2x, img/drill@3x.png 3x" alt="Drill">
-						<p>Schuurmachine FERM
-						  Ak450970</p>
-						<p>€ 150,-</p>
+		<div class="slider__wrapper">
+			<h2 class="slider__title">Bestsellers</h2>
+			<div class="slider__body">
+				<button class="arrow"></button>
+				<div class="slider">
+					<div class="slider__inner">
+						<div class="slider__item">
+							<img src="img/drill.png" srcset="img/drill@2x.png 2x, img/drill@3x.png 3x" alt="Drill">
+							<p>Schuurmachine FERM
+							  Ak450970</p>
+							<p>€ 150,-</p>
+						</div>
+					</div>
+					<div class="slider__inner">
+						<div class="slider__item">
+							<img src="img/signal.png" srcset="img/signal@2x.png 2x, img/signal@3x.png 3x" alt="Alarm signal">
+							<p>Schuurmachine FERM
+							  Ak450970</p>
+							<p>€ 150,-</p>
+						</div>
+					</div>
+					<div class="slider__inner">
+						<div class="slider__item">
+							<img src="img/drill.png" srcset="img/drill@2x.png 2x, img/drill@3x.png 3x" alt="Drill">
+							<p>Schuurmachine FERM
+							  Ak450970</p>
+							<p>€ 150,-</p>
+						</div>
+					</div>
+					<div class="slider__inner">
+						<div class="slider__item">
+							<img src="img/signal.png" srcset="img/signal@2x.png 2x, img/signal@3x.png 3x" alt="Alarm signal">
+							<p>Schuurmachine FERM
+							  Ak450970</p>
+							<p>€ 150,-</p>
+						</div>
+					</div>
+					<div class="slider__inner">
+						<div class="slider__item">
+							<img src="img/drill.png" srcset="img/drill@2x.png 2x, img/drill@3x.png 3x" alt="Drill">
+							<p>Schuurmachine FERM
+							  Ak450970</p>
+							<p>€ 150,-</p>
+						</div>
+					</div>
+					<div class="slider__inner">
+						<div class="slider__item">
+							<img src="img/signal.png" srcset="img/signal@2x.png 2x, img/signal@3x.png 3x" alt="Alarm signal">
+							<p>Schuurmachine FERM
+							  Ak450970</p>
+							<p>€ 150,-</p>
+						</div>
 					</div>
 				</div>
-				<div class="slider__inner">
-					<div class="slider__item">
-						<img src="img/signal.png" srcset="img/signal@2x.png 2x, img/signal@3x.png 3x" alt="Alarm signal">
-						<p>Schuurmachine FERM
-						  Ak450970</p>
-						<p>€ 150,-</p>
-					</div>
-				</div>
-				<div class="slider__inner">
-					<div class="slider__item">
-						<img src="img/drill.png" srcset="img/drill@2x.png 2x, img/drill@3x.png 3x" alt="Drill">
-						<p>Schuurmachine FERM
-						  Ak450970</p>
-						<p>€ 150,-</p>
-					</div>
-				</div>
-				<div class="slider__inner">
-					<div class="slider__item">
-						<img src="img/signal.png" srcset="img/signal@2x.png 2x, img/signal@3x.png 3x" alt="Alarm signal">
-						<p>Schuurmachine FERM
-						  Ak450970</p>
-						<p>€ 150,-</p>
-					</div>
-				</div>
-				<div class="slider__inner">
-					<div class="slider__item">
-						<img src="img/drill.png" srcset="img/drill@2x.png 2x, img/drill@3x.png 3x" alt="Drill">
-						<p>Schuurmachine FERM
-						  Ak450970</p>
-						<p>€ 150,-</p>
-					</div>
-				</div>
-				<div class="slider__inner">
-					<div class="slider__item">
-						<img src="img/signal.png" srcset="img/signal@2x.png 2x, img/signal@3x.png 3x" alt="Alarm signal">
-						<p>Schuurmachine FERM
-						  Ak450970</p>
-						<p>€ 150,-</p>
-					</div>
-				</div>
+				<button class="arrow"></button>
 			</div>
-			<button class="arrow"></button>
-		</section>
+		</div>
 		<!-- END SLIDER -->
 		<!-- DELIVERY -->
-		<section class="delivery">
+		<div class="delivery">
 			<div class="delivery__inner">
 				<h2>Nachtbezorging</h2>
 				<p>Vandaag besteld vannacht al in huis</p>
@@ -158,39 +207,11 @@
 				<p>Vandaag besteld vannacht al in huis</p>
 				<img src="img/delivery2.jpg" srcset="img/delivery2@2x.jpg 2x, img/delivery2@3x.jpg 3x" alt="Delivery">
 			</div>
-		</section>
+		</div>
 		<!-- END DELIVERY -->
 	</div>
-</div>
+</main>
 <!-- END MAIN -->
-<!-- HEADER -->
-<header class="header">
-	<div class="wrapper">
-		<a href="#" class="logo">
-			<img src="img/logo.png" srcset="img/logo@2x.png 2x, img/logo@3x.png 3x" alt="Logo">
-		</a>
-		<div class="header__inner">
-			<div class="header__main">
-				<div class="production">
-					<p>Producten</p><i class="fas fa-angle-down"></i>
-				</div>
-				<form action="" method="" class="search__wrapper">
-					<input type="text" placeholder="Zoek product" class="search">
-					<i class="fas fa-search"></i>
-				</form>
-				<input type="checkbox">
-				<a class="profile"><i class="fas fa-user-alt"></i>Inloggen</a>
-				<a href="#" class="cart"><i class="fas fa-shopping-cart"></i><div class="cart__count"><p>2</p><i class="fas fa-angle-down"></i></div></a>
-			</div>
-			<ul class="advices">
-				<li class="advices__item"><i class="fas fa-thumbs-up"></i>Uitstekende klantenservice</li>
-				<li class="advices__item"><i class="fas fa-truck"></i>Gratis levering of afhalen in onze shops</li>
-				<li class="advices__item"><i class="fas fa-phone-alt"></i>Gratis levering of afhalen in onze shops</li>
-			</ul>
-		</div>
-	</div>
-</header>
-<!-- END HEADER -->
 <!-- FOOTER -->
 <footer class="footer">
 	<div class="footer__inner">
