@@ -372,7 +372,6 @@ body {
 	margin-right: 1%;
 	padding: 7% 4.3%;
 	margin-bottom: 1%;
-	justify-content: center;
 }
 .good--big {
 	flex: 1 1 64%;
@@ -603,6 +602,11 @@ body {
 /* END FOOTER */
 /* END MAIN
 /* MEDIA QUERIES */
+@media screen and (max-width: 1186px) {
+	.good--small {
+		flex-basis: 34%;
+	}
+}
 @media screen and (max-width: 1027px) {
 	html {
 		font-size: 9px;
@@ -669,6 +673,9 @@ body {
 	.good--small {
 		flex-basis: 50%;
 	}
+	.good {
+		justify-content: center;
+	}
 }
 /* END TABLET */
 /* PHONES */
@@ -678,7 +685,6 @@ body {
 		position: relative;
 	}
 	.logo {
-		max-width: 10%;
 		margin-top: 2%;
 		align-self: flex-start;
 	}
@@ -723,6 +729,14 @@ body {
 	}
 	.footer .bottom .list {
 		flex-wrap: wrap;
+	}
+}
+@media screen and (max-width: 576px) {
+	.logo img {
+		height: 43px;
+	}
+	.header__main {
+		padding: 1% 0;
 	}
 }
 @media screen and (max-width: 330px) {
