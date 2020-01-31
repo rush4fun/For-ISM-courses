@@ -48,7 +48,8 @@ button {
 	cursor: pointer;
 }
 body {
-	display: table;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 }
 .wrapper {
@@ -93,7 +94,7 @@ body {
 /* END COMMON */
 /* HEADER */
 .header {
-	display: table-header-group;
+	order: 1;
 	background-color: #FFC700;
 }
 .header .inner {
@@ -144,7 +145,7 @@ body {
 .production-dropdown {
 	display: none;
 	position: absolute;
-	top: 82%;
+	top: 79%;
 	left: 0;
 	background-color: #fff;
 	z-index: 2;
@@ -246,7 +247,7 @@ body {
 }
 .profile__wrapper {
 	cursor: pointer;
-	margin-right: 1rem;
+	margin-right: 0.7rem;
 }
 .profile {
 	display: flex;
@@ -326,7 +327,8 @@ body {
 }
 /* MAIN */
 .main {
-	display: table-row-group;
+	order: 2;
+	flex-grow: 1;
 }
 .main__top .inner {
 	display: flex;
@@ -433,7 +435,7 @@ body {
 }
 /* END CONTENT */
 /* SLIDER */
-.slider .inner {
+.slider {
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 4rem;
@@ -450,7 +452,6 @@ body {
 .slider .body {
 	display: flex;
 	flex-direction: row;
-	position: relative;
 }
 .slider .arrow {
 	position: absolute;
@@ -467,31 +468,25 @@ body {
 }
 .slider .arrow-left {
 	top: 30%;
-	right: 99%;
+	right: 96.5%;
 }
 .slider .arrow-right {
 	top: 30%;
-	left: 99%;
+	left: 96.5%;
 }
 .slider .arrow .icon {
 	font-size: 2.5rem;
 	color: #fff;
 }
 .slider .nav__wrapper {
+	position: relative;
 	overflow: hidden;
 }
 .slider .nav {
 	display: flex;
 	position: relative;
 	flex-direction: row;
-	transition: left 1s ease-in-out;
-	
-	/* FOR ADAPTIVE */
-	flex-wrap: wrap;
-	justify-content: center;
-	  
-	/* WILL BE ANIMATED */
-	/*left: -25%;*/
+	transition: transform 0.6s ease;
 }
 .slider .item {
 	display: flex;
@@ -502,9 +497,6 @@ body {
 	border-right: 2px solid #E8E8E8;
 	padding-bottom: 2rem;
 }
-.slider .item:nth-child(5) {
-	border-right: none;
-}
 .slider .media {
 	flex-basis: 60%;
 	margin: auto;
@@ -512,6 +504,7 @@ body {
 .slider .content {
 	flex-basis: 40%;
 	margin-top: 5rem;
+	word-break: break-word;
 }
 .slider .content .price {
 	font-size: 4rem;
@@ -547,7 +540,7 @@ body {
 /* END DELIVERY */
 /* FOOTER */
 .footer {
-	display: table-footer-group;
+	order: 3;
 }
 .footer .container {
 	background-color: #F5F5F5;
@@ -628,6 +621,11 @@ body {
 /* END FOOTER */
 /* END MAIN
 /* MEDIA QUERIES */
+@media screen and (max-width: 1219px) {
+	.production-dropdown {
+		top: 60%;
+	}
+}
 @media screen and (max-width: 1027px) {
 	html {
 		font-size: 9px;
@@ -641,6 +639,12 @@ body {
 	.good {
 		justify-content: center;
 	}
+	.production-dropdown {
+		top: 50%;
+	}
+	.slider .item {
+		flex: 0 0 25%;
+	}
 }
 /* TABLET */
 @media screen and (max-width: 992px) {
@@ -653,9 +657,6 @@ body {
 	}
 	.production > p.text {
 		display: none;
-	}
-	.header .production-dropdown {
-		top: 64%;
 	}
 	.search__form .btn {
 		left: 93%;
@@ -698,12 +699,6 @@ body {
 	.slider .inner, .delivery .inner {
 		padding-bottom: 2rem;
 	}
-	.slider .arrow-left {
-		right: 98%;
-	}
-	.slider .arrow-right {
-		left: 98%;
-	}
 	.delivery .item {
 		margin: auto;
 	}
@@ -722,10 +717,18 @@ body {
 		left: 86%;
 	}
 	.slider .arrow-left {
-		right: 97%;
+		right: 95%;
 	}
 	.slider .arrow-right {
-		left: 97%;
+		left: 95%;
+	}
+}
+@media screen and (max-width: 654px) {
+	.header .production-dropdown {
+		top: 40%;
+	}
+	.search__wrapper, .btw__wrapper, .profile__wrapper {
+		margin-right: 0.5rem;
 	}
 }
 /* END TABLET */
@@ -768,11 +771,15 @@ body {
 	.good--big .title {
 		font-size: 2.5rem;
 	}
+	.slider .item {
+		flex: 0 0 50%;
+	}
+
 	.slider .arrow-left {
-		right: 90%;
+		right: 92%;
 	}
 	.slider .arrow-right {
-		left: 90%;
+		left: 92%;
 	}
 	.delivery .title {
 		font-size: 3rem;
@@ -793,6 +800,19 @@ body {
 		height: 43px;
 	}
 }
+@media screen and (max-width: 563px) {
+	.header .production-dropdown {
+		top: 40%;
+	}
+}
+@media screen and (max-width: 400px) {
+	.slider .arrow-left {
+		right: 90%;
+	}
+	.slider .arrow-right {
+		left: 90%;
+	}
+}
 @media screen and (max-width: 330px) {
 	.production__wrapper {
 		flex-basis: 12%;
@@ -808,6 +828,9 @@ body {
 	}
 	.header .production-dropdown {
 		top: 42%;
+	}
+	.slider .item {
+		flex: 0 0 100%;
 	}
 }
 /* END PHONES */
