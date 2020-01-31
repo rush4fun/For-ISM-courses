@@ -15,7 +15,7 @@ for (let anchor of anchors) {
 }
 // SLIDER
 var multiItemSlider = (function () {
-      return function (selector, config) { 
+      return function (selector) { 
         var
           slider = document.querySelector(selector), 
           sliderWrapper = slider.querySelector('.js-slider__wrapper'), 
@@ -37,7 +37,7 @@ var multiItemSlider = (function () {
           getMax: items.length - 1,
         }
 
-        var _transformItem = function (direction) {
+        var transformItem = function (direction) {
           if (direction === 'right') {
             if ((positionLeftItem + wrapperWidth / itemWidth - 1) >= position.getMax) {
               return;
@@ -55,28 +55,28 @@ var multiItemSlider = (function () {
           sliderWrapper.style.transform = 'translateX(' + transform + '%)';
         }
 
-        var _controlClick = function (e) {
+        var controlClick = function (e) {
           if (e.target.classList.contains('js-slider__control')) {
             e.preventDefault();
             var direction = e.target.classList.contains('js-slider__control_right') ? 'right' : 'left';
-            _transformItem(direction);
+            transformItem(direction);
           }
         };
 
-        var _setUpListeners = function () {
+        var setUpListeners = function () {
           sliderControls.forEach(function (item) {
-            item.addEventListener('click', _controlClick);
+            item.addEventListener('click', controlClick);
           });
         }
 
-        _setUpListeners();
+        setUpListeners();
 
         return {
           right: function () { 
-            _transformItem('right');
+            transformItem('right');
           },
           left: function () { 
-            _transformItem('left');
+            transformItem('left');
           }
         }
 
@@ -85,3 +85,20 @@ var multiItemSlider = (function () {
 
     var slider = multiItemSlider('.js-slider');
 // Прокручивание слайдера к определенному товару
+var itemWithData = document.querySelectorAll('a[data-num]');
+var setUpListenersForLink = function() {
+  itemWithData.forEach(function (item) {
+    item.addEventListener('click', test);
+  })
+}
+var test = function () {
+  var slider = document.querySelector('.js-slider');
+  var sliderWrapper = slider.querySelector('.js-slider__wrapper');
+  var sliderItems = slider.querySelectorAll('.js-slider__item');
+  var wrapperWidth = parseFloat(getComputedStyle(sliderWrapper).width);
+  var itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width);
+  var step = itemWidth / wrapperWidth * 100;
+  
+  return sliderWrapper.style.transform = 'translateX(-' + this.dataset.num * step + '%)';
+}
+setUpListenersForLink();
