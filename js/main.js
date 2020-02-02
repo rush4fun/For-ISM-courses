@@ -71,6 +71,18 @@ var multiItemSlider = (function () {
 
         setUpListeners();
 
+        // код для движение к обьекту из дропдаун меню Producten
+        var itemWithData = document.querySelectorAll('a[data-num]');
+        var setUpListenersForLink = function() {
+          itemWithData.forEach(function (item) {
+            item.addEventListener('click', moveItem);
+          })
+        }
+        var moveItem = function () { 
+          return sliderWrapper.style.transform = 'translateX(-' + this.dataset.num * step + '%)';
+        }
+        setUpListenersForLink();
+
         return {
           right: function () { 
             transformItem('right');
@@ -85,20 +97,3 @@ var multiItemSlider = (function () {
 
     var slider = multiItemSlider('.js-slider');
 // Прокручивание слайдера к определенному товару
-var itemWithData = document.querySelectorAll('a[data-num]');
-var setUpListenersForLink = function() {
-  itemWithData.forEach(function (item) {
-    item.addEventListener('click', test);
-  })
-}
-var test = function () {
-  var slider = document.querySelector('.js-slider');
-  var sliderWrapper = slider.querySelector('.js-slider__wrapper');
-  var sliderItems = slider.querySelectorAll('.js-slider__item');
-  var wrapperWidth = parseFloat(getComputedStyle(sliderWrapper).width);
-  var itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width);
-  var step = itemWidth / wrapperWidth * 100;
-  
-  return sliderWrapper.style.transform = 'translateX(-' + this.dataset.num * step + '%)';
-}
-setUpListenersForLink();
