@@ -50,6 +50,9 @@ a {
 button {
 	cursor: pointer;
 }
+input:focus, button:focus {
+	outline: none;
+}
 body {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -898,6 +901,14 @@ body {
 		top: 60%;
 	}
 }
+@media screen and (max-width: 1132px) {
+	.slider .arrow-left {
+		right: 96%;
+	}
+	.slider .arrow-right {
+		left: 96%;
+	}
+}
 @media screen and (max-width: 1027px) {
 	html {
 		font-size: 9px;
@@ -928,9 +939,9 @@ body {
 		padding: 0px 2rem;
 	}
 	.header .production {
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
+		-webkit-box-pack: space-around;
+		    -ms-flex-pack: space-around;
+		        justify-content: space-around;
 		padding: 1.6rem 0;
 	}
 	.production > p.text {
@@ -975,6 +986,9 @@ body {
 		    -ms-flex-pack: center;
 		        justify-content: center;
 	}
+	.main .production > span.text {
+		display: none;
+	}
 	.main .products__wrapper {
 		display: none;
 	}
@@ -996,7 +1010,14 @@ body {
 		left: 90%;
 	}
 }
-
+@media screen and (max-width: 805px) {
+	.slider .arrow-left {
+		right: 95%;
+	}
+	.slider .arrow-right {
+		left: 95%;
+	}
+}
 @media screen and (max-width: 703px) {
 	.search__form .btn {
 		left: 86%;
@@ -1008,12 +1029,28 @@ body {
 		left: 95%;
 	}
 }
+@media screen and (max-width: 667px) {
+	.slider .arrow-left {
+		right: 94.5%;
+	}
+	.slider .arrow-right {
+		left: 94.5%;
+	}
+}
 @media screen and (max-width: 654px) {
 	.header .production-dropdown {
 		top: 40%;
 	}
 	.search__wrapper, .btw__wrapper, .profile__wrapper {
 		margin-right: 0.5rem;
+	}
+}
+@media screen and (max-width: 621px) {
+	.slider .arrow-left {
+		right: 94%;
+	}
+	.slider .arrow-right {
+		left: 94%;
 	}
 }
 /* END TABLET */
@@ -1037,6 +1074,9 @@ body {
 	.header__top {
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
+	}
+	.header .production > span.text {
+		display: none;
 	}
 	.header .production-dropdown {
 		top: 52%;
@@ -1100,12 +1140,28 @@ body {
 		top: 40%;
 	}
 }
+@media screen and (max-width: 453px) {
+	.slider .arrow-left {
+		right: 91.5%;
+	}
+	.slider .arrow-right {
+		left: 91.5%;
+	}
+}
 @media screen and (max-width: 400px) {
 	.slider .arrow-left {
 		right: 90%;
 	}
 	.slider .arrow-right {
 		left: 90%;
+	}
+}
+@media screen and (max-width: 357px) {
+	.slider .arrow-left {
+		right: 88%;
+	}
+	.slider .arrow-right {
+		left: 88%;
 	}
 }
 @media screen and (max-width: 330px) {
